@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wetsly Auto &amp; Marine Detailing | Premium Mobile Detailing in Rhode Island</title>
+<meta name="description" content="Premium mobile boat, yacht &amp; auto detailing serving all of Rhode Island. We bring the showroom look to your dock or driveway. Ceramic coating, interior deep clean, oxidation removal. Free quotes — call (401) 362-9364." />
+<meta name="theme-color" content="#0a1a2f" />
+<link rel="preconnect" href="https://api.web3forms.com" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Wetsly Auto &amp; Marine Detailing | Premium Mobile Detailing in Rhode Island" />
+<meta property="og:description" content="We bring the showroom look to your dock or driveway. Premium mobile boat, yacht &amp; auto detailing across all of Rhode Island." />
+<meta property="og:locale" content="en_US" />
+
+<!-- ============================================================= -->
+<!-- META PIXEL BASE CODE                                          -->
+<!-- 👉 REPLACE  YOUR_PIXEL_ID_HERE  WITH YOUR REAL META PIXEL ID   -->
+<!-- ============================================================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID_HERE');   /* 👈 PASTE YOUR PIXEL ID HERE */
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
+<!-- ===================== END META PIXEL ========================= -->
+
+<style>
+/* =========================================================
+   BRAND PALETTE (extracted from logo)
+   ========================================================= */
+:root{
+  --navy-900:#050f1f;
+  --navy-800:#0a1a2f;
+  --navy-700:#0e2340;
+  --navy-600:#123256;
+  --chrome-100:#f4f8ff;
+  --chrome-300:#c7d3e2;
+  --chrome-500:#8fa3bd;
+  --silver:#b8c4d6;
+  --cyan:#22d3ee;
+  --cyan-glow:#38e6ff;
+  --red:#e11d2a;
+  --red-glow:#ff2f3d;
+  --text:#e9eef6;
+  --text-dim:#a9b6c9;
+  --radius:16px;
+  --maxw:1180px;
+  --font-head:"Oswald","Arial Narrow",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+/* Fonts loaded via system fallback stack; @import kept lightweight */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);
+  background:var(--navy-900);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--font-head);font-weight:700;line-height:1.05;letter-spacing:.5px;text-transform:uppercase}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{position:relative}
+
+/* Chrome / metallic text effect */
+.chrome{
+  background:linear-gradient(180deg,#ffffff 0%,#dfe8f5 35%,#94a6c0 52%,#e8eef8 68%,#b6c4d8 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  filter:drop-shadow(0 1px 0 rgba(0,0,0,.35));
+}
+.cyan{color:var(--cyan-glow);text-shadow:0 0 18px rgba(56,230,255,.55)}
+.red{color:var(--red-glow);text-shadow:0 0 18px rgba(255,47,61,.5)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--font-head);font-weight:600;text-transform:uppercase;letter-spacing:1px;
+  font-size:1.02rem;padding:16px 30px;border-radius:60px;border:none;cursor:pointer;
+  transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+  will-change:transform;
+}
+.btn:active{transform:scale(.97)}
+.btn-cyan{
+  background:linear-gradient(135deg,#12b6d6,#38e6ff);
+  color:#04222b;
+  box-shadow:0 0 0 1px rgba(56,230,255,.5),0 8px 30px rgba(34,211,238,.45);
+}
+.btn-cyan:hover{filter:brightness(1.08);box-shadow:0 0 0 1px rgba(56,230,255,.8),0 10px 42px rgba(34,211,238,.65);transform:translateY(-2px)}
+.btn-red{
+  background:linear-gradient(135deg,#b3141f,#ff2f3d);
+  color:#fff;
+  box-shadow:0 0 0 1px rgba(255,47,61,.45),0 8px 30px rgba(225,29,42,.5);
+}
+.btn-red:hover{filter:brightness(1.08);box-shadow:0 0 0 1px rgba(255,47,61,.8),0 10px 42px rgba(225,29,42,.7);transform:translateY(-2px)}
+.btn-ghost{
+  background:rgba(255,255,255,.04);color:var(--text);
+  border:1px solid rgba(143,163,189,.4);
+  backdrop-filter:blur(6px);
+}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan-glow);transform:translateY(-2px)}
+.btn-lg{font-size:1.15rem;padding:19px 40px}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:14px 0;
+  transition:background .3s ease,box-shadow .3s ease,padding .3s ease;
+}
+.site-header.scrolled{
+  background:rgba(5,15,31,.82);
+  backdrop-filter:blur(14px);
+  box-shadow:0 6px 30px rgba(0,0,0,.5);
+  padding:8px 0;
+  border-bottom:1px solid rgba(56,230,255,.14);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg,.brand img{height:46px;width:auto}
+.brand-name{font-family:var(--font-head);font-weight:700;font-size:1.15rem;letter-spacing:1px;line-height:1}
+.brand-name span{display:block;font-size:.62rem;letter-spacing:3px;color:var(--cyan);font-weight:500}
+.header-cta{display:none}
+@media(min-width:760px){.header-cta{display:inline-flex}}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:120px 0 80px;
+  background:
+    radial-gradient(1100px 600px at 78% 8%,rgba(34,211,238,.16),transparent 60%),
+    radial-gradient(900px 500px at 10% 90%,rgba(225,29,42,.13),transparent 60%),
+    linear-gradient(180deg,var(--navy-800) 0%,var(--navy-900) 100%);
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(115deg,transparent 46%,rgba(56,230,255,.10) 49%,transparent 52%),
+    linear-gradient(115deg,transparent 60%,rgba(255,47,61,.08) 63%,transparent 66%);
+  pointer-events:none;
+}
+.hero-grid{position:relative;z-index:2;display:grid;gap:34px;align-items:center}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero-logo{max-width:340px;margin-bottom:22px}
+.hero-logo svg{width:100%;height:auto;filter:drop-shadow(0 10px 40px rgba(34,211,238,.35))}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-head);letter-spacing:3px;font-size:.72rem;text-transform:uppercase;
+  color:var(--cyan);border:1px solid rgba(56,230,255,.35);border-radius:40px;
+  padding:7px 16px;margin-bottom:20px;background:rgba(56,230,255,.06);
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan-glow);box-shadow:0 0 10px var(--cyan-glow)}
+.hero h1{font-size:clamp(2.15rem,7vw,4rem);margin-bottom:18px}
+.hero h1 .line{display:block}
+.hero p.sub{font-size:clamp(1.02rem,2.6vw,1.28rem);color:var(--text-dim);max-width:560px;margin-bottom:30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-visual{position:relative}
+.hero-card{
+  position:relative;border-radius:24px;overflow:hidden;
+  border:1px solid rgba(143,163,189,.22);
+  background:linear-gradient(160deg,var(--navy-600),var(--navy-800));
+  box-shadow:0 30px 80px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.06);
+  aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-card .badge{
+  position:absolute;top:18px;left:18px;z-index:3;
+  font-family:var(--font-head);letter-spacing:2px;font-size:.7rem;text-transform:uppercase;
+  background:rgba(5,15,31,.7);border:1px solid rgba(56,230,255,.4);color:var(--cyan);
+  padding:6px 12px;border-radius:30px;backdrop-filter:blur(6px);
+}
+.hero-card .glass-boat{width:78%;opacity:.92}
+.trust-row{display:flex;flex-wrap:wrap;gap:22px;margin-top:30px;color:var(--text-dim);font-size:.9rem}
+.trust-row .t{display:flex;align-items:center;gap:8px}
+.trust-row svg{width:18px;height:18px;stroke:var(--cyan)}
+
+/* =========================================================
+   SECTION SHELL
+   ========================================================= */
+.section-pad{padding:88px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 52px}
+.section-head .eyebrow{margin-bottom:16px}
+.section-head h2{font-size:clamp(1.8rem,5vw,2.9rem);margin-bottom:14px}
+.section-head p{color:var(--text-dim);font-size:1.05rem}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(143,163,189,.35),transparent)}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+.services{background:linear-gradient(180deg,var(--navy-900),var(--navy-800))}
+.cards{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{
+  position:relative;padding:30px 26px;border-radius:var(--radius);
+  background:linear-gradient(165deg,rgba(18,50,86,.55),rgba(10,26,47,.75));
+  border:1px solid rgba(143,163,189,.16);
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+  overflow:hidden;
+}
+.card::after{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--cyan),transparent);
+  opacity:0;transition:opacity .3s ease;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(56,230,255,.4);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+.card:hover::after{opacity:1}
+.card .icon{
+  width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 30% 30%,rgba(56,230,255,.22),rgba(18,50,86,.6));
+  border:1px solid rgba(56,230,255,.35);margin-bottom:18px;
+}
+.card .icon svg{width:28px;height:28px;stroke:var(--cyan-glow);fill:none;stroke-width:1.7}
+.card h3{font-size:1.28rem;margin-bottom:10px;letter-spacing:.5px}
+.card p{color:var(--text-dim);font-size:.96rem}
+
+/* =========================================================
+   WHY US
+   ========================================================= */
+.why{background:var(--navy-900)}
+.why-grid{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:640px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-item{
+  text-align:center;padding:32px 22px;border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(18,50,86,.35),transparent);
+  border:1px solid rgba(143,163,189,.12);
+  transition:transform .3s ease,border-color .3s ease;
+}
+.why-item:hover{transform:translateY(-5px);border-color:rgba(255,47,61,.35)}
+.why-item .wicon{
+  width:64px;height:64px;margin:0 auto 16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 30% 30%,rgba(255,47,61,.2),rgba(18,50,86,.5));
+  border:1px solid rgba(255,47,61,.35);
+}
+.why-item .wicon svg{width:30px;height:30px;stroke:var(--red-glow);fill:none;stroke-width:1.7}
+.why-item h3{font-size:1.15rem;margin-bottom:9px}
+.why-item p{color:var(--text-dim);font-size:.92rem}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gallery{background:linear-gradient(180deg,var(--navy-800),var(--navy-900))}
+.gallery-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+.shot{
+  position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;
+  border:1px solid rgba(143,163,189,.18);
+  background:
+    repeating-linear-gradient(45deg,rgba(18,50,86,.55) 0 14px,rgba(10,26,47,.55) 14px 28px);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  transition:transform .3s ease,border-color .3s ease;cursor:pointer;
+}
+.shot:hover{transform:scale(1.02);border-color:rgba(56,230,255,.45)}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shot .ph{position:relative;z-index:2;padding:14px}
+.shot .ph svg{width:34px;height:34px;stroke:var(--chrome-500);fill:none;stroke-width:1.5;margin:0 auto 8px}
+.shot .ph span{display:block;font-family:var(--font-head);letter-spacing:2px;font-size:.72rem;color:var(--chrome-500);text-transform:uppercase}
+.shot .tag{
+  position:absolute;bottom:10px;left:10px;z-index:3;
+  font-family:var(--font-head);letter-spacing:1.5px;font-size:.62rem;text-transform:uppercase;
+  background:rgba(5,15,31,.75);border:1px solid rgba(56,230,255,.3);color:var(--cyan);
+  padding:4px 9px;border-radius:20px;
+}
+.gallery-note{text-align:center;margin-top:26px;color:var(--chrome-500);font-size:.85rem}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.testi{background:var(--navy-900)}
+.testi-grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:820px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
+.quote{
+  padding:30px 26px;border-radius:var(--radius);
+  background:linear-gradient(165deg,rgba(18,50,86,.5),rgba(10,26,47,.7));
+  border:1px solid rgba(143,163,189,.16);position:relative;
+}
+.quote .stars{color:#ffcf3f;letter-spacing:3px;margin-bottom:14px;font-size:1.05rem}
+.quote p{color:var(--text);font-size:1rem;margin-bottom:20px;font-style:italic}
+.quote .who{display:flex;align-items:center;gap:12px}
+.quote .av{
+  width:44px;height:44px;border-radius:50%;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-head);font-weight:700;color:#04222b;
+  background:linear-gradient(135deg,#38e6ff,#12b6d6);
+}
+.quote .who b{display:block;font-size:.98rem}
+.quote .who small{color:var(--text-dim)}
+
+/* =========================================================
+   QUOTE FORM
+   ========================================================= */
+.quote-sec{
+  background:
+    radial-gradient(800px 400px at 85% 0%,rgba(34,211,238,.12),transparent 60%),
+    radial-gradient(700px 400px at 0% 100%,rgba(225,29,42,.12),transparent 60%),
+    var(--navy-800);
+}
+.form-shell{
+  max-width:760px;margin:0 auto;padding:38px 30px;border-radius:22px;
+  background:linear-gradient(165deg,rgba(18,50,86,.55),rgba(5,15,31,.85));
+  border:1px solid rgba(56,230,255,.22);
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+.form-grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:620px){.form-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-family:var(--font-head);font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--chrome-300)}
+.field label .req{color:var(--red-glow)}
+.field input,.field select,.field textarea{
+  width:100%;padding:14px 15px;border-radius:11px;
+  background:rgba(5,15,31,.6);color:var(--text);
+  border:1px solid rgba(143,163,189,.28);
+  font-family:var(--font-body);font-size:1rem;transition:border-color .2s ease,box-shadow .2s ease;
+}
+.field textarea{resize:vertical;min-height:110px}
+.field select{appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2338e6ff' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(56,230,255,.18)}
+.field input:user-invalid,.field select:user-invalid{border-color:rgba(255,47,61,.6)}
+.form-submit{grid-column:1/-1;margin-top:6px}
+.form-submit .btn{width:100%}
+.form-note{grid-column:1/-1;text-align:center;color:var(--chrome-500);font-size:.82rem;margin-top:4px}
+.form-msg{
+  grid-column:1/-1;display:none;text-align:center;padding:20px;border-radius:14px;
+  border:1px solid rgba(56,230,255,.5);background:rgba(34,211,238,.1);
+  font-family:var(--font-head);letter-spacing:.5px;font-size:1.1rem;color:var(--cyan-glow);
+}
+.form-msg.show{display:block;animation:pop .4s ease}
+.form-msg.error{border-color:rgba(255,47,61,.6);background:rgba(225,29,42,.12);color:var(--red-glow)}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer{background:var(--navy-900);padding:56px 0 110px;border-top:1px solid rgba(143,163,189,.14)}
+@media(min-width:760px){.site-footer{padding-bottom:56px}}
+.footer-grid{display:grid;gap:30px;grid-template-columns:1fr;text-align:center}
+@media(min-width:760px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr;text-align:left}}
+.footer-brand svg{height:56px;width:auto;margin-bottom:14px}
+.footer-brand p{color:var(--text-dim);font-size:.92rem;max-width:320px;margin:0 auto}
+@media(min-width:760px){.footer-brand p{margin:0}}
+.footer-col h4{font-family:var(--font-head);letter-spacing:2px;font-size:.82rem;color:var(--cyan);margin-bottom:16px;text-transform:uppercase}
+.footer-col a,.footer-col p{display:block;color:var(--text-dim);font-size:.95rem;margin-bottom:9px;transition:color .2s ease}
+.footer-col a:hover{color:var(--cyan-glow)}
+.socials{display:flex;gap:12px;justify-content:center}
+@media(min-width:760px){.socials{justify-content:flex-start}}
+.socials a{
+  width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(143,163,189,.3);transition:all .25s ease;
+}
+.socials a:hover{border-color:var(--cyan);background:rgba(56,230,255,.1);transform:translateY(-3px)}
+.socials svg{width:20px;height:20px;fill:var(--chrome-300)}
+.socials a:hover svg{fill:var(--cyan-glow)}
+.footer-bottom{text-align:center;margin-top:44px;padding-top:24px;border-top:1px solid rgba(143,163,189,.12);color:var(--chrome-500);font-size:.82rem}
+
+/* =========================================================
+   STICKY MOBILE BOTTOM BAR
+   ========================================================= */
+.mobile-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  background:rgba(5,15,31,.94);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(56,230,255,.25);
+  box-shadow:0 -8px 30px rgba(0,0,0,.5);
+}
+.mobile-bar a{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 10px;font-family:var(--font-head);letter-spacing:1px;text-transform:uppercase;
+  font-size:.92rem;font-weight:600;
+}
+.mobile-bar .mb-call{color:#fff;background:linear-gradient(135deg,#b3141f,#ff2f3d)}
+.mobile-bar .mb-quote{color:#04222b;background:linear-gradient(135deg,#12b6d6,#38e6ff)}
+.mobile-bar svg{width:19px;height:19px}
+@media(min-width:760px){.mobile-bar{display:none}}
+@media(min-width:760px){body{padding-bottom:0}}
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     👉 To use your real logo: replace the inline <svg> inside
+        .brand with:  <img src="assets/logo.png" alt="Wetsly">
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Wetsly Auto and Marine Detailing home">
+      <!-- LOGO MARK (swap with your real logo image) -->
+      <svg viewBox="0 0 60 46" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="chr" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#93a6c0"/><stop offset="1" stop-color="#e8eef8"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 10 L14 34 L22 16 L30 34 L38 16 L46 34 L56 10" fill="none" stroke="url(#chr)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 40 Q30 30 52 40" fill="none" stroke="#38e6ff" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="30" cy="7" r="2.6" fill="#ff2f3d"/>
+      </svg>
+      <span class="brand-name">WETSLY<span>AUTO &amp; MARINE</span></span>
+    </a>
+    <a href="#quote" class="btn btn-cyan header-cta">Get My Free Quote</a>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <!-- BIG HERO LOGO (swap with your real logo image if preferred) -->
+      <div class="hero-logo reveal">
+        <svg viewBox="0 0 420 150" role="img" aria-label="Wetsly Auto and Marine Detailing">
+          <defs>
+            <linearGradient id="chrome2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#dfe8f5"/>
+              <stop offset=".52" stop-color="#8fa3bd"/><stop offset=".68" stop-color="#eef3fb"/>
+              <stop offset="1" stop-color="#b6c4d8"/>
+            </linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <path d="M20 34 L48 96 L70 46 L92 96 L114 46 L136 96 L164 34" fill="none" stroke="url(#chrome2)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M30 110 Q92 88 154 110" fill="none" stroke="#38e6ff" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+          <circle cx="92" cy="26" r="5.5" fill="#ff2f3d" filter="url(#glow)"/>
+          <text x="184" y="70" font-family="Oswald,Arial Narrow,sans-serif" font-weight="700" font-size="46" fill="url(#chrome2)" letter-spacing="2">WETSLY</text>
+          <text x="185" y="98" font-family="Oswald,Arial,sans-serif" font-weight="500" font-size="16" fill="#38e6ff" letter-spacing="6">AUTO &amp; MARINE</text>
+          <text x="185" y="120" font-family="Inter,sans-serif" font-weight="500" font-size="12.5" fill="#a9b6c9" letter-spacing="4">DETAILING</text>
+        </svg>
+      </div>
+
+      <span class="eyebrow reveal"><span class="dot"></span>Premium Mobile Detailing · Rhode Island</span>
+      <h1 class="reveal">
+        <span class="line chrome">Your Boat Deserves</span>
+        <span class="line chrome">The Showroom Look —</span>
+        <span class="line cyan">We Bring It To Your Dock</span>
+      </h1>
+      <p class="sub reveal">White-glove boat, yacht &amp; auto detailing that comes to your marina or driveway. Showroom-grade results, premium products, and owner-operated care — anywhere in Rhode Island.</p>
+      <div class="hero-actions reveal">
+        <a href="#quote" class="btn btn-cyan btn-lg">Get My Free Quote</a>
+        <a href="tel:+14013629364" class="btn btn-ghost btn-lg js-call" data-call="hero">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (401) 362-9364
+        </a>
+      </div>
+      <div class="trust-row reveal">
+        <span class="t"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Fully Mobile Service</span>
+        <span class="t"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Marine-Grade Products</span>
+        <span class="t"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Owner-Operated</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-card">
+        <span class="badge">Before → After</span>
+        <!-- Swap this SVG for a real hero photo:  <img src="assets/hero.jpg" alt=""> -->
+        <svg class="glass-boat" viewBox="0 0 240 300" fill="none" aria-hidden="true">
+          <defs><linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8eef8"/><stop offset="1" stop-color="#8fa3bd"/></linearGradient></defs>
+          <path d="M30 200 Q120 250 210 200 L190 235 Q120 268 50 235 Z" fill="url(#hull)"/>
+          <path d="M60 200 L70 150 L175 150 L185 200 Z" fill="#123256" stroke="#38e6ff" stroke-width="2"/>
+          <path d="M120 60 L120 150 M120 60 L165 150" stroke="#c7d3e2" stroke-width="3" stroke-linecap="round"/>
+          <path d="M20 250 Q120 232 220 250" stroke="#38e6ff" stroke-width="3" opacity=".6"/>
+          <path d="M10 268 Q120 250 230 268" stroke="#38e6ff" stroke-width="2" opacity=".35"/>
+          <circle cx="150" cy="110" r="6" fill="#ff2f3d"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section class="section-pad services" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>What We Do</span>
+      <h2 class="chrome">Detailing That Turns Heads</h2>
+      <p>From waterline to dashboard, every service is delivered with meticulous, showroom-obsessed care.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20l2-6h12l2 6M6 14l2-8h8l2 8M12 6V3"/></svg></div>
+        <h3>Boat &amp; Yacht Detailing</h3>
+        <p>Full exterior &amp; interior detailing for vessels of every size — hull, gelcoat, deck, and cabin restored to a mirror finish at your slip.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 17h14M6.5 17l-1.2-5.3A2 2 0 0 1 7.2 9h9.6a2 2 0 0 1 1.9 2.7L17.5 17M4 17v2M20 17v2M8 9l1-3h6l1 3"/></svg></div>
+        <h3>Auto Detailing</h3>
+        <p>Premium hand wash, paint decontamination, wheels, and a flawless finish that makes your daily driver feel brand new.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.8 7.2 17l.9-5.4L4.2 7.7l5.4-.8z"/></svg></div>
+        <h3>Ceramic Coating</h3>
+        <p>Long-lasting nano-ceramic protection that locks in gloss, repels salt &amp; UV, and keeps your finish slick for years.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 20v-6h6v6"/></svg></div>
+        <h3>Interior Deep Clean</h3>
+        <p>Steam extraction, leather conditioning, and odor elimination that leaves cabins and cockpits fresh, sanitized, and pristine.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+        <h3>Oxidation Removal &amp; Polish</h3>
+        <p>Multi-stage cut &amp; polish that erases chalky oxidation, swirls, and dullness — reviving deep, wet-look shine on gelcoat and paint.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22c4-4 7-7.5 7-12a7 7 0 0 0-14 0c0 4.5 3 8 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Fully Mobile — We Come to You</h3>
+        <p>Marina, mooring, driveway, or office lot — we arrive fully self-contained with water and power. Zero hassle for you.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY US
+     ============================================================ -->
+<section class="section-pad why" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>The Wetsly Difference</span>
+      <h2 class="chrome">Why Rhode Island Chooses Wetsly</h2>
+      <p>Concierge-level detailing built on convenience, craftsmanship, and genuine pride of ownership.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24"><path d="M3 13l2-5h11l3 5M5 13h14v4H5zM7 17a2 2 0 1 0 0 .01M17 17a2 2 0 1 0 0 .01"/></svg></div>
+        <h3>We Come To You</h3>
+        <p>At your marina, dock, or driveway — fully mobile so you never move a thing.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.8 7.2 17l.9-5.4L4.2 7.7l5.4-.8z"/></svg></div>
+        <h3>Premium Products</h3>
+        <p>Marine-grade, pro-tier compounds, coatings, and sealants — never cutting corners.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg></div>
+        <h3>Owner-Operated Pride</h3>
+        <p>You deal directly with the detailer who treats every vessel like his own.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24"><path d="M12 22c4-4 7-7.5 7-12a7 7 0 0 0-14 0c0 4.5 3 8 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>All of Rhode Island</h3>
+        <p>From Newport to Providence to Watch Hill — the whole Ocean State, covered.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY (6 swappable placeholder slots)
+     👉 Replace each .shot placeholder with a real image:
+        <img src="assets/gallery-1.jpg" alt="Boat detailing before and after">
+     ============================================================ -->
+<section class="section-pad gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Proof In The Shine</span>
+      <h2 class="chrome">Before &amp; After Gallery</h2>
+      <p>Real results from decks and driveways across Rhode Island.</p>
+    </div>
+    <div class="gallery-grid">
+      <!-- SLOT 1 --><div class="shot reveal"><span class="tag">Boat · Before/After</span><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-4 4-2-2-4 4"/></svg><span>Your Photo Here</span></div></div>
+      <!-- SLOT 2 --><div class="shot reveal"><span class="tag">Yacht · Hull Polish</span><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-4 4-2-2-4 4"/></svg><span>Your Photo Here</span></div></div>
+      <!-- SLOT 3 --><div class="shot reveal"><span class="tag">Auto · Ceramic</span><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-4 4-2-2-4 4"/></svg><span>Your Photo Here</span></div></div>
+      <!-- SLOT 4 --><div class="shot reveal"><span class="tag">Interior · Deep Clean</span><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-4 4-2-2-4 4"/></svg><span>Your Photo Here</span></div></div>
+      <!-- SLOT 5 --><div class="shot reveal"><span class="tag">Oxidation · Removed</span><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-4 4-2-2-4 4"/></svg><span>Your Photo Here</span></div></div>
+      <!-- SLOT 6 --><div class="shot reveal"><span class="tag">Gelcoat · Restored</span><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-4 4-2-2-4 4"/></svg><span>Your Photo Here</span></div></div>
+    </div>
+    <p class="gallery-note">📸 Swap these 6 placeholders with your real before/after photos in <code>index.html</code> (search for “SLOT 1”).</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="section-pad testi" id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Client Love</span>
+      <h2 class="chrome">What Owners Are Saying</h2>
+      <p>Placeholder reviews — swap in your real testimonials any time.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Showed up right at my slip and made my 32-footer look better than the day I bought it. The gelcoat is like glass now. Unreal service.”</p>
+        <div class="who"><div class="av">M</div><div><b>Michael R.</b><small>Newport, RI</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Booked the ceramic coating for my truck and the interior deep clean. Professional, on time, and the shine is next level. Highly recommend.”</p>
+        <div class="who"><div class="av">S</div><div><b>Sarah T.</b><small>Providence, RI</small></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Came to our marina and knocked out the oxidation on the hull in an afternoon. Owner clearly takes real pride in the work. Worth every penny.”</p>
+        <div class="who"><div class="av">D</div><div><b>David &amp; Karen L.</b><small>Warwick, RI</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     QUOTE FORM  (Web3Forms)
+     👉 REPLACE  YOUR_WEB3FORMS_KEY_HERE  WITH YOUR REAL ACCESS KEY
+        Get a free key at https://web3forms.com
+     ============================================================ -->
+<section class="section-pad quote-sec" id="quote">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Free · No Obligation</span>
+      <h2 class="chrome">Get Your Free Quote</h2>
+      <p>Tell us about your boat or vehicle and we’ll get back to you within 24 hours.</p>
+    </div>
+
+    <form class="form-shell reveal" id="quoteForm" novalidate>
+      <!-- Web3Forms required hidden fields -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE" />
+      <input type="hidden" name="subject" value="New Quote Request — Wetsly Auto &amp; Marine Detailing" />
+      <input type="hidden" name="from_name" value="Wetsly Website" />
+      <!-- Honeypot spam trap -->
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="f-name">Name <span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" required placeholder="Your full name" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone <span class="req">*</span></label>
+          <input id="f-phone" name="phone" type="tel" required placeholder="(401) 000-0000" autocomplete="tel"
+                 pattern="[\d\s\-\+\(\)]{7,}" inputmode="tel" />
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" required placeholder="you@email.com" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="f-service">Service Type <span class="req">*</span></label>
+          <select id="f-service" name="service_type" required>
+            <option value="" disabled selected>Choose a service…</option>
+            <option>Boat / Yacht</option>
+            <option>Auto</option>
+            <option>Ceramic Coating</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-size">Boat Size or Vehicle</label>
+          <input id="f-size" name="boat_size_or_vehicle" type="text" placeholder="e.g. 32ft cruiser / 2022 F-150" />
+        </div>
+        <div class="field">
+          <label for="f-city">City / Marina</label>
+          <input id="f-city" name="city_or_marina" type="text" placeholder="e.g. Newport Harbor" />
+        </div>
+        <div class="field full">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" placeholder="Tell us what you need…"></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-red btn-lg" id="submitBtn">Request My Quote</button>
+        </div>
+        <p class="form-note">🔒 Your info is only used to contact you about your quote. No spam, ever.</p>
+        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <!-- Swap with your real logo:  <img src="assets/logo.png" alt="Wetsly"> -->
+      <svg viewBox="0 0 420 150" role="img" aria-label="Wetsly Auto and Marine Detailing">
+        <defs><linearGradient id="chrome3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#8fa3bd"/><stop offset="1" stop-color="#e8eef8"/></linearGradient></defs>
+        <path d="M20 34 L48 96 L70 46 L92 96 L114 46 L136 96 L164 34" fill="none" stroke="url(#chrome3)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 110 Q92 88 154 110" fill="none" stroke="#38e6ff" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="92" cy="26" r="5.5" fill="#ff2f3d"/>
+        <text x="184" y="70" font-family="Oswald,Arial Narrow,sans-serif" font-weight="700" font-size="46" fill="url(#chrome3)" letter-spacing="2">WETSLY</text>
+        <text x="185" y="98" font-family="Oswald,Arial,sans-serif" font-weight="500" font-size="16" fill="#38e6ff" letter-spacing="6">AUTO &amp; MARINE</text>
+      </svg>
+      <p>Premium mobile boat, yacht &amp; auto detailing. We bring the showroom look straight to your dock or driveway.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+14013629364" class="js-call" data-call="footer">📞 (401) 362-9364</a>
+      <a href="#quote">✉️ Request a Free Quote</a>
+      <p>Mon–Sat · By Appointment</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Service Area</h4>
+      <p>Proudly Serving<br/><strong style="color:var(--chrome-100)">All of Rhode Island</strong></p>
+      <p>Newport · Providence · Warwick · Bristol · Watch Hill &amp; beyond</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.5 3c.3 2 1.6 3.6 3.5 3.9v2.6c-1.3 0-2.5-.4-3.5-1.1v6.1a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.7a2.9 2.9 0 1 0 2 2.8V3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    © <span id="year"></span> Wetsly Auto &amp; Marine Detailing · Rhode Island · All rights reserved.
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY MOBILE BOTTOM BAR
+     ============================================================ -->
+<div class="mobile-bar">
+  <a href="tel:+14013629364" class="mb-call js-call" data-call="mobilebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call Now
+  </a>
+  <a href="#quote" class="mb-quote">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+    Get Quote
+  </a>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+(function(){
+  "use strict";
+
+  /* Year */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* Header shrink on scroll */
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){
+    if(window.scrollY > 40) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Scroll reveal */
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Meta Pixel — Contact event on click-to-call */
+  document.querySelectorAll('.js-call').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(typeof fbq === 'function'){
+        fbq('track', 'Contact', {source: a.getAttribute('data-call') || 'call'});
+      }
+    });
+  });
+
+  /* Quote form → Web3Forms */
+  var form = document.getElementById('quoteForm');
+  var msg  = document.getElementById('formMsg');
+  var btn  = document.getElementById('submitBtn');
+
+  function showMsg(text, isError){
+    msg.textContent = text;
+    msg.classList.add('show');
+    msg.classList.toggle('error', !!isError);
+    msg.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.classList.remove('show','error');
+
+    /* Native + basic validation */
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    var email = form.email.value.trim();
+    var phone = form.phone.value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    var phoneOk = (phone.replace(/\D/g,'').length >= 7);
+    if(!emailOk){ showMsg('Please enter a valid email address.', true); form.email.focus(); return; }
+    if(!phoneOk){ showMsg('Please enter a valid phone number.', true); form.phone.focus(); return; }
+
+    var original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var data = Object.fromEntries(new FormData(form).entries());
+
+    fetch('https://api.web3forms.com/submit', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(data)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(json){
+      if(json.success){
+        /* Meta Pixel — Lead event */
+        if(typeof fbq === 'function'){ fbq('track', 'Lead', {content_name:'Quote Request'}); }
+        form.reset();
+        showMsg('✅ Thank you! We’ll contact you within 24 hours.', false);
+      } else {
+        showMsg('Something went wrong. Please call us at (401) 362-9364.', true);
+      }
+    })
+    .catch(function(){
+      showMsg('Network error. Please call us at (401) 362-9364.', true);
+    })
+    .finally(function(){
+      btn.disabled = false;
+      btn.textContent = original;
+    });
+  });
+})();
+</script>
+</body>
+</html>
