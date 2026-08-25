@@ -154,6 +154,17 @@ textarea{width:100%; font-family:inherit; font-size:15px; color:var(--ink);
 .cal .d.train{background:var(--primary-soft); border-color:transparent; color:var(--primary-ink)}
 .cal .d.walk{background:var(--accent-soft); border-color:transparent; color:var(--accent-ink)}
 .cal .d.rest .dt{color:var(--muted)}
+.daycard{border-top:4px solid var(--line); padding-top:14px}
+.daycard.train{border-top-color:var(--primary)}
+.daycard.walk{border-top-color:var(--accent)}
+.daycard.rest{border-top-color:var(--faint)}
+.dayhdr{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:9px}
+.dayhdr .dl{display:flex; flex-direction:column; gap:1px}
+.daynum{font-family:var(--dispf); font-weight:800; font-size:20px; line-height:1.05}
+.daynum small{display:block; font-family:var(--bodyf); font-weight:600; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin-bottom:2px}
+.pill.rest{background:var(--surface-2); color:var(--muted); border:1px solid var(--line)}
+.walkcard{display:flex; gap:12px; align-items:center; background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius-sm); padding:12px}
+.walkcard .ex-ill{background:var(--surface); color:var(--accent)}
 
 /* exercise */
 .ex{border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden; margin-bottom:11px; background:var(--surface)}
@@ -793,25 +804,61 @@ function exCard(k, sets, dose, rest){
      <div class="row hd"><div class="t">Más difícil / gimnasio</div>${e.hard}</div>
    </div></div>`;
 }
+function findDay(w, label){
+  if(/^A/.test(label)) return w.days.find(x=>x.nm.startsWith('A'));
+  if(/^B/.test(label)) return w.days.find(x=>x.nm.startsWith('B'));
+  if(/Núcleo/.test(label)) return w.days.find(x=>x.nm.startsWith('Núcleo'));
+  return null;
+}
+function shortType(label){
+  if(/Fuerza/.test(label)) return 'Fuerza';
+  if(/Núcleo/.test(label)) return 'Núcleo';
+  if(/Caminata/.test(label)) return 'Caminar';
+  return 'Descanso';
+}
 function renderTrainWeek(){
   const w=WK[db.week-1];
   const dn=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];
+  const full=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
   const cal=`<div class="cal">${w.cal.map((c,i)=>{
     const cl = /Fuerza|Núcleo/.test(c)?'train': /Caminata/.test(c)?'walk':'rest';
-    return `<div class="d ${cl}"><div class="dn">${dn[i]}</div><div class="dt">${c.replace(' · ',' ')}</div></div>`;
+    return `<div class="d ${cl}"><div class="dn">${dn[i]}</div><div class="dt">${shortType(c)}</div></div>`;
   }).join('')}</div>`;
-  const days=w.days.map(day=>
-    `<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px">
-       <h2 style="font-size:18px">${day.nm}</h2></div>
-     <p class="lead">🎯 ${day.obj}</p>
-     ${day.ex.map(([k,s,r,rest])=>exCard(k,s,r,rest)).join('')}</div>`).join('');
+
+  const dayCards = w.cal.map((label,i)=>{
+    const isTrain = /Fuerza|Núcleo/.test(label);
+    const isWalk = /Caminata/.test(label);
+    const kind = isTrain?'train':(isWalk?'walk':'rest');
+    let badge, inner;
+    if(isTrain){
+      const day=findDay(w,label);
+      const rutina = /Núcleo/.test(label) ? 'Núcleo + caminata' : ('Fuerza · rutina '+day.nm.charAt(0));
+      badge=`<span class="pill">${/Núcleo/.test(label)?'Núcleo + core':'Fuerza'}</span>`;
+      inner=`<p class="lead" style="margin-bottom:11px">🎯 ${day.obj}</p>
+        <div class="eyebrow" style="margin-bottom:9px">${rutina} · ${day.ex.length} ejercicios</div>
+        ${day.ex.map(([k,s,r,rest])=>exCard(k,s,r,rest)).join('')}`;
+    } else if(isWalk){
+      badge=`<span class="pill acc">Cardio</span>`;
+      inner=`<div class="walkcard"><div class="ex-ill">${EX.walk.ill}</div>
+          <div class="ex-meta"><div class="nm">${label}</div><div class="mu">${EX.walk.musc}</div>
+          <div class="ex-dose"><span>ritmo cómodo-medio</span><span>puedes hablar, no cantar</span></div></div></div>
+        <p class="disc" style="margin:9px 2px 0">${EX.walk.tech}</p>`;
+    } else {
+      badge=`<span class="pill rest">Libre</span>`;
+      inner=`<p style="font-size:14px;margin:0">Día de descanso. Descansar también es progreso: tu cuerpo se hace más fuerte cuando se recupera. Si quieres, una caminata suave; hidrátate y prioriza dormir bien.</p>`;
+    }
+    return `<div class="card daycard ${kind}">
+      <div class="dayhdr"><div class="dl"><span class="daynum"><small>Día ${i+1}</small>${full[i]}</span></div>${badge}</div>
+      ${inner}</div>`;
+  }).join('');
+
   $('trainWeek').innerHTML =
     `<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
-       <h2>Semana ${w.n}</h2><span class="pill acc">${w.rpe.split('·')[0].trim()}</span></div>
+       <h2>Semana ${w.n} · ${w.title}</h2><span class="pill acc">${w.rpe.split('·')[0].trim()}</span></div>
      <p class="lead">${w.focus}</p>
-     <div class="eyebrow" style="margin:6px 0 8px">Calendario de la semana</div>${cal}
-     <p class="disc" style="margin:10px 0 0"><strong>Esfuerzo:</strong> ${w.rpe}</p></div>
-     ${days}`;
+     <div class="eyebrow" style="margin:6px 0 8px">Vista rápida de la semana</div>${cal}
+     <p class="disc" style="margin:10px 0 0">Abajo tienes <strong>cada día con sus ejercicios</strong>. Toca un ejercicio para ver la técnica y las versiones fácil/difícil. <strong>Esfuerzo:</strong> ${w.rpe}</p></div>
+     ${dayCards}`;
   $('warmup').innerHTML = WARMUP.map(x=>`<li>${x}</li>`).join('');
   $('minwk').innerHTML = MINWK.map(x=>`<li>${x}</li>`).join('');
   $('cardioBox').innerHTML = `<div class="ex-ill" style="float:left;margin:0 12px 6px 0">${EX.walk.ill}</div><p style="font-size:14px">${w.walks}</p><div style="clear:both"></div>`;
